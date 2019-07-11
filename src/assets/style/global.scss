@@ -1,0 +1,10 @@
+$wid : 1000px;
+$globalMainColor:#0c9d72;
+$globalMainColor2:#af74ec;
+$globalMainColor3:#f3f7fd;
+
+@mixin gobalBackground {
+    background-color: #fff;
+    border-radius: 5px;
+    min-height: 100%;
+}
