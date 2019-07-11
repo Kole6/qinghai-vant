@@ -1,7 +1,7 @@
-<!---->
+<!--通讯录 不往下调转-->
 <template>
     <div>
-      通讯录
+      通讯录 不往下调转
     </div>
 </template>
 <script>
