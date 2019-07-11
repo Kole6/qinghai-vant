@@ -27,6 +27,18 @@ export default new Router({
       path: '/plan2',
       component: () => import('@/views/plan/plan2.vue')
     },
+    {
+      path: '/jing1',
+      component: () => import('@/views/jing/jing1.vue')
+    },
+    {
+      path: '/jing2',
+      component: () => import('@/views/jing/jing2.vue')
+    },
+    {
+      path: '/jing3',
+      component: () => import('@/views/jing/jing3.vue')
+    },
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'active-exact'
