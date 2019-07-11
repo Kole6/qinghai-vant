@@ -19,6 +19,14 @@ export default new Router({
       path: '/mail3',
       component: () => import('@/views/mail/mail3.vue')
     },
+    {
+      path: '/plan1',
+      component: () => import('@/views/plan/plan1.vue')
+    },
+    {
+      path: '/plan2',
+      component: () => import('@/views/plan/plan2.vue')
+    },
   ],
   linkActiveClass: 'active',
   linkExactActiveClass: 'active-exact'
