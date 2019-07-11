@@ -26,7 +26,7 @@ export default {
   methods: {
     getList() {
       this.$HTTP.api({
-        root: "/myjson",
+        root: "http://118.213.82.198:8084",
         url: "/3663000000/js_app!result.action",
         method: "GET",
         params: {
