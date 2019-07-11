@@ -35,7 +35,7 @@
         </div>
         <div class="text3">原价180</div>
       </div>
-      <div class="bottom_ticket">立刻预定</div>
+      <div class="bottom_ticket" @click="handleRouter">立刻预定</div>
     </div>
   </div>
 </template>
@@ -44,7 +44,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    handleRouter(){
+      this.$router.push({path:'/jing3'})
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
