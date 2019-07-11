@@ -20,6 +20,10 @@ export default new Router({
       component: () => import('@/views/mail/mail3.vue')
     },
     {
+      path: '/mail4',
+      component: () => import('@/views/mail/mail4.vue')
+    },
+    {
       path: '/plan1',
       component: () => import('@/views/plan/plan1.vue')
     },

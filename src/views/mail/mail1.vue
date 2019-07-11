@@ -2,7 +2,9 @@
 <template>
   <div>
     <img class="head" :src="require('../../assets/img/qinghai/1_01.jpg')" />
+    <br><br>
     <img class="sel" @click="sel1" :src="require('../../assets/img/qinghai/1_02.jpg')" />
+    <br><br>
     <img class="sel" @click="sel2" :src="require('../../assets/img/qinghai/1_03.jpg')" />
   </div>
 </template>
