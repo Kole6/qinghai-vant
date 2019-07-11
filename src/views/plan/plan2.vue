@@ -2,15 +2,15 @@
   <div class="container">
     <div class="item">
       <span>请假类型:&nbsp;</span>
-      <span>病假</span>
+      <span>{{renItem.qjlx}}</span>
     </div>
     <div class="item item--margin">
       <span>请假时间:&nbsp;</span>
-      <span class="text--color text-size3">2018/12/11-2018/12/1</span>
+      <span class="text--color text-size3">{{renItem.kssj}}-{{renItem.jssj}}</span>
     </div>
     <div class="item item--margin item--padding">
       <span class="text--height">请假理由:</span>
-      <div class="reason text--color">生病卧床,无法工作</div>
+      <div class="reason text--color">{{renItem.qjsy}}</div>
     </div>
     <div class="item item--padding">
       <span class="text--height">图片</span>
@@ -24,7 +24,9 @@
 export default {
   name: "plan2",
   data() {
-    return {};
+    return {
+      renItem: this.$route.query
+    };
   },
   methods: {}
 };

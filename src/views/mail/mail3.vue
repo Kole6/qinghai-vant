@@ -50,7 +50,7 @@ export default {
   methods: {
     getList() {
       this.$HTTP.api({
-        root: "/myjson",
+        root: "http://47.103.69.156:18001",
         url: "/c01/testJson/personnel.json",
         method: "GET",
         successCallback: function(data) {
