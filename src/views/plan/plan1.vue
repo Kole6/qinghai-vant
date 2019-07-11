@@ -1,63 +1,18 @@
 <template>
   <div class="container">
-    <!-- <div id="one">
-      <div class="item item--margin">
-        <div class="item_left">
-          <span>请选择教学楼</span>
-        </div>
-        <div class="item_right">
-          <span class="item_right_content">请选择</span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_left">
-          <span>开始时间</span>
-        </div>
-        <div class="item_right">
-          <span class="item_right_content">请选择</span>
-        </div>
-      </div>
-      <div class="item item--margin">
-        <div class="item_left">
-          <span>结束时间</span>
-        </div>
-        <div class="item_right">
-          <span class="item_right_content">请选择</span>
-        </div>
-      </div>
-      <div class="other">
-        <span>请假事由</span>
-        <textarea name rows="5"></textarea>
-        <input type="file" style="display: none" id="file" />
-        <div class="file_replace" onclick="handleFile()">
-          <img src="@/assets/img/file.jpg" alt />
-        </div>
-      </div>
-      <div class="btn">提交</div>
-    </div> -->
     <div id="two" >
-      <div class="list" v-for="(item,index) in dataArr" :key="index" @click="handleRouter">
+      <div class="list" v-for="(item,index) in dataArr" :key="index" @click="handleRouter(item)">
         <p>
           <span>请假类型:</span>
-          <span>{{item.type}}</span>
+          <span>{{item.qjlx}}</span>
         </p>
         <p>
           <span>请假时间:&nbsp;&nbsp;</span>
-          <span>{{item.time}}</span>
+          <span>{{item.kssj}}-{{item.jssj}}</span>
         </p>
       </div>
       
     </div>
-    <!-- <div class="bottom">
-      <div class="bottom_item one active" onclick="handleClick(0)">
-        <img src="@/assets/img/one_active.jpg" alt />
-        <span>请假</span>
-      </div>
-      <div class="bottom_item two" onclick="handleClick(1)">
-        <img src="@/assets/img/two.jpg" alt />
-        <span>记录</span>
-      </div>
-    </div> -->
   </div>
 </template>
 <script>
@@ -65,30 +20,30 @@ export default {
   name: "other",
   data() {
     return {
-        dataArr:[
-            {
-                type:'病假',
-                time:'2018/10/12-2018/10/21',
-            },
-            {
-                type:'病假',
-                time:'2018/10/12-2018/10/21',
-            },
-            {
-                type:'病假',
-                time:'2018/10/12-2018/10/21',
-            },
-            {
-                type:'病假',
-                time:'2018/10/12-2018/10/21',
-            },
-        ]
+        dataArr:[]
     };
   },
-  methods:{
-      handleRouter(){
-          this.$router.push({path:'/plan2'})
-      }
+  methods: {
+    getList() {
+      this.$HTTP.api({
+        root: "http://118.213.82.198:8084",
+        url: "/3663000000/js_app!result.action",
+        method: "GET",
+        params: {
+          forward: 'qjjlList2',
+          loginName:'admin'
+        },
+        successCallback: function(data) {
+          this.dataArr = data.result
+        }.bind(this)
+      });
+    },
+    handleRouter(ren){
+      this.$router.push({path:'/plan2',query: ren})
+    }
+  },
+  mounted() {
+    this.getList();
   }
 };
 </script>

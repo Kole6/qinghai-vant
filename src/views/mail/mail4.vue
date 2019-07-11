@@ -16,10 +16,6 @@ export default {
     return {
       renItem: this.$route.query
     };
-  },
-  methods: {},
-  mounted() {
-    console.log("this.$route.query", this.$route.query);
   }
 };
 </script>

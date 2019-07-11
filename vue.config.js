@@ -9,7 +9,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/myjson': {
-                target: 'http://47.103.69.156:18001', // 接口域名
+                target: 'http://118.213.82.198:8084', // 接口域名
                 secure: false, // https配置false
                 changeOrigin: true, //是否跨域
                 pathRewrite: {
