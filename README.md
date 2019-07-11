@@ -1,6 +1,5 @@
 # Project description
-name：江西魔方h5 2.0
-
+name：青海
 ## Project setup
 ```
 yarn install
