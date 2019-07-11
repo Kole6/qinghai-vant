@@ -4,7 +4,7 @@
       <div class="list" v-for="(item,index) in dataArr" :key="index" @click="handleRouter(item)">
         <p>
           <span>请假类型:</span>
-          <span>{{item.qjlx}}</span>
+          <span>{{item.qjlx==1?"病假":'事假'}}</span>
         </p>
         <p>
           <span>请假时间:&nbsp;&nbsp;</span>

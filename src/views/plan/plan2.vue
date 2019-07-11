@@ -2,7 +2,7 @@
   <div class="container">
     <div class="item">
       <span>请假类型:&nbsp;</span>
-      <span>{{renItem.qjlx}}</span>
+      <span>{{renItem.qjlx==1?"病假":'事假'}}</span>
     </div>
     <div class="item item--margin">
       <span>请假时间:&nbsp;</span>
